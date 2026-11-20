@@ -1,0 +1,80 @@
+/* =====================================================
+   style.css - CSS tambahan milik kita sendiri
+   Bootstrap sudah mengatur hampir semua tampilan.
+   File ini hanya untuk hal yang tidak ada di Bootstrap.
+   ===================================================== */
+
+/* ---------- HERO / BANNER (beranda) ---------- */
+/* "../" artinya naik satu folder (dari css/ ke assets/), lalu masuk img/banner/ */
+.hero {
+    min-height: 60vh;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), /* lapisan gelap agar tulisan terbaca */
+        url("../img/banner/banner-kue.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---------- FOTO PRODUK ---------- */
+/* Semua foto produk dibuat persegi (1:1) dan dipotong rapi,
+   supaya tinggi card sama walaupun ukuran fotonya berbeda.
+   Dipakai di card (beranda & katalog) dan di halaman detail. */
+.foto-produk {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* ---------- WARNA TEMA ---------- */
+/* PENTING untuk Pertemuan 2: halaman produk, detail, dan kontak memakai class
+   bg-tema dan btn-tema. Pastikan blok di bawah ini ADA dan TIDAK dikomentari
+   di style.css milikmu. Ganti kodenya dengan warna UMKM-mu (cari di coolors.co). */
+:root {
+    --warna-utama: #7a4a2b;
+    --warna-kedua: #f7e9d6;
+}
+
+.bg-tema {
+    background-color: var(--warna-utama) !important;
+}
+
+.btn-tema {
+    background-color: var(--warna-utama);
+    border-color: var(--warna-utama);
+    color: #fff;
+}
+
+.btn-tema:hover {
+    filter: brightness(0.9);
+    color: #fff;
+}
+
+/* ---------- TOMBOL WHATSAPP MELAYANG ---------- */
+.tombol-wa {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
+
+/* ---------- PERTEMUAN 2 - TANTANGAN 3 (opsional) ---------- */
+/* UBAH (Tantangan 3): hapus tanda komentar jika kamu membuat tombol filter kategori
+   (nav-pills) di produk.html.
+   - Bagian pertama: tombol kategori memakai warna tema (berubah penuh saat disentuh/diklik).
+   - Bagian kedua: saat melompat ke #kategori, judulnya tidak tertutup navbar yang menempel di atas. */
+/*
+.nav-pills .nav-link {
+    color: var(--warna-utama);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+    background-color: var(--warna-utama);
+    color: #fff;
+}
+
+.kategori {
+    scroll-margin-top: 90px;
+}
+*/
